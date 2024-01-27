@@ -1,0 +1,112 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    min-height: 100%;
+}
+
+header {
+    background: url('images/Evergreen.avif') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation {
+    justify-content: center;
+}
+
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    color:#B6C4B6
+}
+
+#sectionbody {
+    background-color: #163020;
+    height: 100vh;
+    color: #fff;
+    width: 65%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.aside {
+    background-color: #B6C4B6;
+    height: 100vh;
+    color: #fff;
+    width: 35%;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+.FunFacts {
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hikinglist a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.hikinglist a:hover {
+    color: #163020
+}
+
+.questioninput {
+    width: 400px;
+    position: relative;
+    resize: none;
+}
+
+textarea.questioninput::placeholder {
+    position: absolute;
+    bottom: 0px;
+    left: 2px;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #999;
+}

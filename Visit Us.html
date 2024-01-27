@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Washington State</title>
+  </head>
+  <body>
+    <div class="header"><header>
+      <h1><br />Washington State</h1>
+      <div class="navigation">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Olympia.html">Olympia</a></li>
+            <li><a href="Seattle.html">Seattle</a></li>
+            <li><a href="Bellingham.html">Bellingham</a></li>
+            <li><a href="Visit Us.html">Visit Us</a></li>
+          </ul>
+        </nav></header>
+      </div>
+    </div>
+    <div class="sectionbody" id="sectionbody">
+      <section>
+        <h2>The Evergreen State</h2>
+        <center>
+        <form
+          action="process-form.php"
+          method="post"
+          onsubmit="return validateForm()"
+        >
+
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter your first name"
+            required
+          />
+
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter your last name"
+            required
+          />
+
+          <br /><br />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="confirmEmail">Confirm Email:</label>
+          <input
+            type="email"
+            id="confirmEmail"
+            name="confirmEmail"
+            placeholder="Confirm your email"
+            required
+          />
+
+          <br /><br />
+          <label for="question">Reason for Visit:</label>
+          <textarea
+            id="question"
+            class="questioninput"
+            name="question"
+            rows="1"
+            placeholder="Business, Pleasure, Etc."
+            required
+          ></textarea>
+
+          <br /><br />
+          <input type="submit" value="Submit" />
+
+          <p class="error-message" id="emailError"></p>
+        </center></form>
+
+        <script>
+          function validateForm() {
+            var email = document.getElementById("email").value;
+            var confirmEmail = document.getElementById("confirmEmail").value;
+            var errorMessage = document.getElementById("emailError");
+
+            if (email !== confirmEmail) {
+              errorMessage.textContent = "Please verify that email addresses match.";
+              return false;
+            } else {
+              errorMessage.textContent = "";
+              return true;
+            }
+          }
+        </script>
+        <img
+          src="images/Visit Us.jpg"
+          alt="Hiking Photo"
+          width="500"
+          height="300"
+        />
+      </section>
+    </div>
+    <div class="aside"><aside>
+      <section>Fun Facts</section>
+      <br/>
+      <p>You can visit us any time.</p>
+    </div></aside>
+  </body>
+</html>
